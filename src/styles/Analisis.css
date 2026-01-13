@@ -1,0 +1,408 @@
+/* ============================================================
+   FONDO GENERAL
+============================================================ */
+.analisis-wrapper {
+  position: relative;
+  padding: 60px 20px;
+  min-height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   HERO CON EFECTO
+============================================================ */
+.analisis-hero {
+  text-align: center;
+  margin-bottom: 55px;
+  animation: slideDown 0.7s ease;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #e0f7ff, #5ac8fa);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  margin-top: 10px;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/* ============================================================
+   CARD PRINCIPAL (GLASSMORPHISM PRO)
+============================================================ */
+.analisis-main-card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 30px;
+  border-radius: 22px;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  backdrop-filter: blur(18px);
+  border-left: 6px solid #5ac8fa;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease;
+}
+
+.card-title {
+  font-size: 26px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.analisis-list li {
+  list-style: none;
+  padding: 6px 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* ============================================================
+   GRID DE TARJETAS PREMIUM
+============================================================ */
+.analisis-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* TARJETAS PEQUEÑAS */
+.mini-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 26px;
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  transition: 0.35s ease;
+  animation: slideUp 0.8s ease;
+  border-top: 5px solid #5ac8fa;
+  color: white;
+}
+
+.mini-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* ICONO SUPERIOR */
+.icon-top {
+  font-size: 45px;
+  color: #5ac8fa;
+  margin-bottom: 10px;
+}
+
+/* ============================================================
+   ANIMACIONES
+============================================================ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-25px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadePage {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Contenido desplegable */
+.card-content {
+  margin-top: 12px;
+  opacity: 0;
+  animation: fadeInContent 0.4s forwards;
+  font-size: 16px;
+}
+
+@keyframes fadeInContent {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* GRID */
+.analisis-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* TARJETAS NUEVAS */
+.mini-card-new {
+  position: relative;
+  background: linear-gradient(135deg, #1b3a57, #154d6b);
+  border-radius: 25px;
+  padding: 40px 20px 20px 20px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.mini-card-new:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.5);
+}
+
+/* ICONO CIRCULAR */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #5ac8fa, #00ffcc);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #0d1b2a;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.mini-card-new:hover .icon-circle {
+  transform: translateX(-50%) scale(1.1) rotate(10deg);
+}
+
+/* TITULO */
+.card-title-new {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* CONTENIDO DESPLEGABLE */
+.card-content-new {
+  margin-top: 15px;
+  overflow: hidden;
+  transition: height 0.4s ease, opacity 0.3s ease;
+}
+
+.card-content-new p,
+.card-content-new ul {
+  font-size: 16px;
+  text-align: left;
+  opacity: 0.95;
+}
+
+.card-content-new ul {
+  padding-left: 20px;
+}
+
+.card-content-new li {
+  margin-bottom: 6px;
+}
+
+/* ===============================
+   GRID
+================================ */
+.analisis-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   CARD
+================================ */
+.mini-card {
+  position: relative;
+  background: linear-gradient(160deg, #1c3f5e, #14344f);
+  border-radius: 20px;
+  padding: 28px 22px 22px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* ===============================
+   ICONO
+================================ */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #5ac8fa, #00ffd5);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #0d1b2a;
+  margin: 0 auto 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+}
+
+/* ===============================
+   TITULO
+================================ */
+.card-title-new {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   CONTENIDO DESPLEGABLE
+================================ */
+.card-content-new {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  text-align: left;
+}
+
+.mini-card.open .card-content-new {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.card-content-new p,
+.card-content-new ul {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.card-content-new ul {
+  padding-left: 20px;
+}
+
+.card-content-new li {
+  margin-bottom: 6px;
+}
+
+.mini-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.06));
+  pointer-events: none;
+}
+
+/* =======================
+   CARRUSEL DE SERVICIOS
+======================= */
+.carousel-wrapper {
+  margin-top: 25px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel-wrapper::-webkit-scrollbar-thumb {
+  background: #5ac8fa;
+  border-radius: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  padding: 10px 5px;
+}
+
+/* =======================
+   TARJETAS DEL CARRUSEL
+======================= */
+.carousel-card {
+  min-width: 240px;
+  max-width: 240px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+  border-top: 4px solid #5ac8fa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.45);
+}
+
+.carousel-icon {
+  font-size: 26px;
+  color: #5ac8fa;
+  margin-bottom: 10px;
+}
+
+.carousel-card p {
+  font-size: 15.5px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* ===============================
+   FONDO ANIMADO (IMAGEN CAYENDO)
+================================ */
+.analisis-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/Analisis-fondo.jpeg");
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center top;
+  animation: fondoCayendo 40s linear infinite;
+  z-index: -2;
+  opacity: 0.35;
+}
+
+/* Oscurece un poco para legibilidad */
+.analisis-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 27, 42, 0.85),
+    rgba(21, 57, 91, 0.85),
+    rgba(27, 79, 114, 0.85)
+  );
+  z-index: -1;
+}
+
+/* ===============================
+   ANIMACIÓN
+================================ */
+@keyframes fondoCayendo {
+  from {
+    background-position: center top;
+  }
+  to {
+    background-position: center bottom;
+  }
+}

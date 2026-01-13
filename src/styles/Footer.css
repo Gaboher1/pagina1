@@ -1,0 +1,76 @@
+/* ===== FOOTER ESTILO PREMIUM Y QUE CUBRE TODO EL ESPACIO ===== */
+
+/* Hace que el footer cubra cualquier hueco antes de él */
+.footer-container {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px;
+  margin-top: auto !important;
+
+  background: linear-gradient(135deg, #0a0f24, #02040f);
+  text-align: center;
+  color: #e5e5e5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 200px; /* <-- el footer abarca más espacio para cubrir blancos */
+  overflow: hidden;
+}
+
+/* Luz animada futurista */
+.footer-glow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.35), transparent 70%);
+  filter: blur(40px);
+  animation: glowPulse 6s infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.2);
+  }
+  100% {
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 140, 255, 0.6);
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.footer-sub {
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: 0.8;
+  animation: fadeIn 2s ease forwards;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

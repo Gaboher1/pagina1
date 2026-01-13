@@ -1,0 +1,138 @@
+/* ====================== CONTENEDOR GENERAL ====================== */
+.servicios-container {
+  min-height: 100vh;
+  padding: 70px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.8s ease-in-out;
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+/* ====================== PARTÍCULAS ====================== */
+.particle-layer {
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/iconos.png");
+  opacity: 0.12;
+  animation: floatParticles 25s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes floatParticles {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-800px); }
+}
+
+/* ====================== TÍTULO ====================== */
+.servicios-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #b8e9ff, #52b4ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.servicios-sub {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* ====================== CARRUSEL 3D ====================== */
+.carousel-3d {
+  margin: 60px auto 40px;
+  width: 100%;
+  max-width: 950px;
+  perspective: 1100px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 🔥 ANIMACIÓN DEL CARRUSEL COMPLETO */
+.card-3d {
+  width: 240px;
+  height: 260px;
+  background: rgba(10, 37, 64, 0.45);
+  border-radius: 20px;
+  padding: 25px;
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.12);
+  text-align: center;
+  color: white;
+  box-shadow: 0 20px 35px rgba(0,0,0,0.35);
+
+  transform:
+    rotateY(calc(var(--offset) * -32deg))
+    translateX(calc(var(--offset) * -40px))
+    scale(calc(1 - var(--abs-offset) * 0.12));
+
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-3d.active {
+  box-shadow: 0 25px 70px rgba(39, 148, 214, 0.45);
+  border: 1px solid var(--color);
+}
+
+.card-3d h3 {
+  margin-top: 14px;
+  font-size: 1.3rem;
+  color: #d9f2ff;
+  font-weight: 700;
+}
+
+.card-3d p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* ====================== PANEL DETALLADO ====================== */
+.detail-panel {
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto;
+  background: rgba(10, 37, 64, 0.45);
+  padding: 35px;
+  border-radius: 22px;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 15px;
+  border-bottom-width: 3px;
+  margin-bottom: 20px;
+}
+
+.detail-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-description {
+  line-height: 1.6;
+  font-size: 1.05rem;
+  opacity: 0.95;
+  color: #dcefff;
+}

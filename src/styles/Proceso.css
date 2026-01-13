@@ -1,0 +1,127 @@
+/* RESET DE ESTILO – DISEÑO CLÍNICO / ACADÉMICO */
+
+.proceso-section {
+  background: #f8fbff;
+  color: #1b3c73;
+  font-family: "Inter", sans-serif;
+  padding: 100px 20px;
+}
+
+/* HEADER */
+.proceso-header {
+  max-width: 800px;
+  margin: 0 auto 90px;
+  text-align: center;
+}
+
+.proceso-header h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.proceso-header p {
+  font-size: 1.25rem;
+  line-height: 1.7rem;
+  opacity: 0.85;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #dce4ef;
+  transform: translateX(-50%);
+}
+
+/* ITEM */
+.timeline-item {
+  display: flex;
+  width: 100%;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.timeline-item.left {
+  justify-content: flex-end;
+}
+
+.timeline-item.right {
+  justify-content: flex-start;
+}
+
+/* ICONO */
+.timeline-icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2d589e;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  z-index: 2;
+}
+
+/* TARJETA */
+.timeline-card {
+  background: white;
+  width: 45%;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.timeline-card h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.timeline-card pre {
+  white-space: pre-wrap;
+  font-size: 1.05rem;
+  line-height: 1.7rem;
+}
+
+/* CIERRE */
+.proceso-cierre {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #3bb273;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    justify-content: flex-start;
+    padding-left: 70px;
+  }
+
+  .timeline-icon {
+    left: 30px;
+  }
+
+  .timeline-card {
+    width: 100%;
+  }
+}

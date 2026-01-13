@@ -1,0 +1,168 @@
+/* === NAVBAR — AZUL PREMIUM ELEGANTE === */
+.nav-container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  /* Fondo azul oscuro que combina con tu UI */
+  background: rgba(7, 16, 31, 0.70);
+  backdrop-filter: blur(16px);
+
+  /* Glow azul */
+  box-shadow: 0 8px 30px rgba(0, 199, 255, 0.22);
+}
+
+.nav-inner {
+  max-width: 1400px;
+  margin: auto;
+  padding: 14px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* === LOGO === */
+.nav-logo {
+  font-size: 1.9rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: #e8f5ff;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.nav-logo:hover {
+  text-shadow: 0 0 14px #00c7ff;
+}
+
+.logo-accent {
+  color: #5ac8fa;
+}
+
+/* === MENÚ === */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px; /* separación equilibrada */
+  padding: 0;
+  margin: 0;
+}
+
+/* Item */
+.nav-item {
+  padding: 6px 0;
+}
+
+/* === ENLACES === */
+.nav-links li a {
+  color: #d9e7f5;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 40px;
+  position: relative;
+
+  transition: 0.35s ease;
+}
+
+/* Glow en hover */
+.nav-links li a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 14px #00c7ff;
+}
+
+/* === ÍCONO === */
+.nav-icon {
+  font-size: 1.35rem;
+  color: #5ac8fa; /* azul que combina con tu diseño */
+  transition: opacity 0.25s ease, transform 0.3s ease;
+  position: absolute;
+}
+
+.nav-icon.hidden {
+  opacity: 0;
+  transform: translateY(-14px);
+}
+
+/* === TEXTO (al hacer hover) === */
+.nav-text {
+  opacity: 0;
+  transform: translateY(14px);
+  position: absolute;
+
+  transition: 0.32s ease;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #e8f5ff;
+}
+
+.nav-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === HAMBURGER === */
+.nav-hamburger {
+  font-size: 1.9rem;
+  color: #00c7ff;
+  cursor: pointer;
+  display: none;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 950px) {
+  .nav-hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    height: 100vh;
+    width: 70%;
+    padding-top: 90px;
+
+    background: rgba(7, 16, 31, 0.92);
+    backdrop-filter: blur(20px);
+
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    transform: translateX(100%);
+    transition: 0.4s ease;
+  }
+
+  .nav-active {
+    transform: translateX(0);
+  }
+
+  .nav-links li a {
+    width: auto;
+    height: auto;
+    font-size: 1.4rem;
+  }
+}
+
+.nav-logo-img {
+  height: 55px;        /* Mantiene el tamaño real que controla el navbar */
+  width: auto;
+  object-fit: contain;
+
+  /* 🔵 Aumentamos su tamaño visual */
+  transform: scale(3.0);   /* Ajusta a tu gusto: 1.2, 1.4, 1.6, etc. */
+
+  /* Para que no afecte el flujo */
+  transform-origin: center;
+}
+

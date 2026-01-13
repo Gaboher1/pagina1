@@ -1,0 +1,199 @@
+/* ============================================================
+   FONDO GENERAL
+============================================================ */
+.about-wrapper {
+  width: 100%;
+  background: linear-gradient(135deg, #0D1B2A, #15395B, #1B4F72);
+  color: white;
+  padding-bottom: 90px;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   SECCIÓN HERO — MUY MODERNA
+============================================================ */
+.about-hero-modern {
+  padding: 90px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-hero-modern-text h1 {
+  font-size: 3.4rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #E0F7FF, #5AC8FA);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.about-hero-modern-text p {
+  font-size: 1.25rem;
+  opacity: 0.85;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.about-hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.about-hero-stats div {
+  text-align: center;
+}
+
+.about-hero-stats strong {
+  font-size: 2.2rem;
+  color: #5AC8FA;
+}
+
+.about-hero-modern-photo {
+  width: 330px;
+  height: 380px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  backdrop-filter: blur(14px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+   SECCIÓN TARJETAS DIFERENTES
+============================================================ */
+.about-section-alt {
+  margin-top: 80px;
+  padding: 60px 6%;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #E0F7FF, #5AC8FA);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.alt-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.alt-card-1,
+.alt-card-2,
+.alt-card-3 {
+  padding: 26px;
+  border-radius: 18px;
+  backdrop-filter: blur(16px);
+  transition: 0.35s ease;
+  color: white;
+}
+
+.alt-card-1 {
+  background: rgba(255, 255, 255, 0.12);
+}
+.alt-card-2 {
+  background: linear-gradient(135deg, #15395B44, #5AC8FA33);
+}
+.alt-card-3 {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ============================================================
+   LÍNEA DEL TIEMPO
+============================================================ */
+.timeline-section {
+  margin-top: 70px;
+  padding: 50px 6%;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 40px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #5AC8FA55;
+  transform: translateX(-2px);
+}
+
+.timeline-item {
+  width: 45%;
+  padding: 20px;
+  background: rgba(255,255,255,0.12);
+  margin-bottom: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  position: relative;
+}
+
+.timeline-item.right {
+  margin-left: auto;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background: #5AC8FA;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: -8px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -8px;
+}
+
+/* ============================================================
+   ACORDEÓN
+============================================================ */
+.accordion-section {
+  margin-top: 80px;
+  padding: 40px 6%;
+}
+
+.accordion-section details {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+}
+
+/* ============================================================
+   TARJETAS FLOTANTES
+============================================================ */
+.floating-cards-section {
+  margin-top: 80px;
+  padding: 40px 6%;
+}
+
+.floating-cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.floating-card {
+  flex: 1;
+  min-width: 260px;
+  padding: 26px;
+  background: rgba(255,255,255,0.14);
+  border-radius: 18px;
+  backdrop-filter: blur(14px);
+  transition: 0.3s ease;
+}
