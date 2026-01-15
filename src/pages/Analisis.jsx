@@ -116,8 +116,7 @@ export default function Analisis() {
             <ul>
               <li>Estadística descriptiva</li>
               <li>Pruebas de hipótesis</li>
-              <li>Regresiones</li>
-              <li>Correlaciones</li>
+              <li>Regresiones y Correlaciones</li>
               <li>Análisis avanzados</li>
             </ul>
           </div>
