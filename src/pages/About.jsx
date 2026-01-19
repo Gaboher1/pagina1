@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/About.css";
+import aboutPhoto from "../assets/logo_doc.png";
+
 
 export default function About() {
   return (
@@ -31,14 +33,20 @@ export default function About() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          className="about-hero-modern-photo"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-        >
-          FOTO AQUÍ
-        </motion.div>
+       <motion.div
+  className="about-hero-modern-photo"
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.7 }}
+>
+  <img
+    src={aboutPhoto}
+    alt="Foto representativa"
+    className="about-photo-img"
+  />
+</motion.div>
+
+
       </section>
 
       {/* ====================== SECCIÓN 1: TARJETAS ====================== */}
@@ -133,6 +141,23 @@ export default function About() {
               de nuevos investigadores y liderazgo institucional en proyectos de alto impacto.
             </p>
           </motion.div>
+
+          <motion.div
+  className="timeline-item right"
+  initial={{ x: 60, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ duration: 0.6 }}
+>
+  <div className="timeline-dot" />
+  <h3>2021 — Actualidad | Apoyo a Proyectos Científicos y Formación de Recursos Humanos</h3>
+  <p>
+    Acompañamiento integral en el desarrollo de proyectos científicos, tesis,
+    protocolos de investigación y publicaciones académicas. Formación y
+    capacitación de recursos humanos en investigación, fortaleciendo competencias
+    metodológicas, analíticas y éticas en distintos niveles académicos.
+  </p>
+</motion.div>
+
 
         </div>
       </section>

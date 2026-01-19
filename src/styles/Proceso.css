@@ -164,3 +164,18 @@
     align-items: flex-start;
   }
 }
+
+/* TÍTULO DEL PASO */
+.proceso-card-advanced h3 {
+  font-size: 1.50rem; /* antes ~1.1rem */
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* TEXTO "Paso X" */
+.card-step {
+  font-size: 1.30rem; /* antes ~0.75rem */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}

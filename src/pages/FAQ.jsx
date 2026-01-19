@@ -126,7 +126,7 @@ export default function FAQ() {
 
     try {
       const response = await fetch(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyD7xt7h34aG3JwR0VcsCB1xGQvXLXDJlWo",
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyBEtwPzPbsz_tv5VQOjjXFXxBh8KRdGbRU",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
