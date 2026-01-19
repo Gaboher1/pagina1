@@ -139,7 +139,7 @@ export default function Proceso() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        Tu proyecto no avanza solo. <strong>Avanza contigo.</strong>
+        TU PROYECTO NO AVANZA SOLO <strong>AVANZA CONTIGO.</strong>
       </motion.div>
 
     </section>
