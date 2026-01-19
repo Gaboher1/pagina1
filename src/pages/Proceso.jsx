@@ -12,7 +12,8 @@ import "../styles/Proceso.css";
 const steps = [
   {
     icon: <FaEnvelope />,
-    title: "1. Tú nos contactas",
+    title: "Tú nos contactas",
+    size: "normal",
     text: `Tienes una idea, una tarea, un protocolo, un ensayo o un proyecto…
 ¡y no sabes por dónde empezar!
 
@@ -20,7 +21,8 @@ Nos escribes y nos cuentas qué necesitas en pocas palabras.`,
   },
   {
     icon: <FaSearch />,
-    title: "2. Revisamos tu caso y definimos lo que realmente necesitas",
+    title: "Analizamos tu caso",
+    size: "normal",
     text: `Analizamos tu nivel académico, tu objetivo, tu fecha límite y los requisitos
 de tu escuela o institución.
 
@@ -29,15 +31,23 @@ viable y con sentido académico.`,
   },
   {
     icon: <FaCalendarAlt />,
-    title: "3. Te entregamos una propuesta clara y tiempos de trabajo",
+    title: "Propuesta clara",
+    size: "wide",
     text: `Sin confusiones, sin letra pequeña.
 
-Recibes un plan breve con lo que haremos, cómo lo haremos y cuándo tendrás los avances.
-Tú decides si avanzamos.`,
+Recibes una propuesta clara, honesta y bien estructurada donde te explicamos
+qué haremos, cómo lo haremos y en qué tiempos recibirás cada avance.
+
+Definimos objetivos, alcances y entregables desde el inicio para que sepas
+exactamente qué esperar en cada etapa del proceso.
+
+Tú tienes el control en todo momento: revisas la propuesta, haces preguntas,
+ajustamos lo necesario y decides con total tranquilidad si avanzamos.`,
   },
   {
     icon: <FaHandshake />,
-    title: "4. Trabajamos contigo paso a paso",
+    title: "Trabajo colaborativo",
+    size: "normal",
     text: `Aquí ocurre la magia:
 
 – Asesoría personalizada  
@@ -51,7 +61,8 @@ Trabajamos hasta que tu proyecto quede sólido y profesional.`,
   },
   {
     icon: <FaFlagCheckered />,
-    title: "5. Te entregamos el resultado final",
+    title: "Entrega final",
+    size: "normal",
     text: `Tu trabajo llega completo, claro y listo para entregar o enviar:
 
 ✔ Tarea o ensayo terminado  
@@ -66,54 +77,72 @@ Además, si lo deseas, seguimos contigo para los ajustes finales o el envío a r
 
 export default function Proceso() {
   return (
-    <section className="proceso-section">
+    <section className="proceso-wrapper">
 
       {/* HERO */}
-      <motion.div
-        className="proceso-header"
-        initial={{ opacity: 0, y: 30 }}
+      <motion.header
+        className="proceso-hero"
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1>Cómo Funciona el Proceso</h1>
+        <span className="proceso-eyebrow">Nuestro método</span>
+        <h1>Un proceso claro, humano y científico</h1>
         <p>
-          Acompañamos tu aprendizaje desde la primera idea
-          hasta tu artículo científico terminado.
+          Te acompañamos desde la idea inicial hasta el resultado final,
+          con estructura, rigor y acompañamiento real.
         </p>
-      </motion.div>
+      </motion.header>
 
-      {/* TIMELINE */}
-      <div className="timeline">
+      {/* GRID AVANZADO */}
+      <div className="proceso-grid-advanced">
         {steps.map((step, index) => (
-          <motion.div
+          <motion.article
             key={index}
-            className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className={`proceso-card-advanced ${step.size}`}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
           >
-            <div className="timeline-icon">{step.icon}</div>
-            <div className="timeline-card">
-              <h2>{step.title}</h2>
-              <pre>{step.text}</pre>
+            <div className="card-head">
+              <div className="card-icon">{step.icon}</div>
+              <span className="card-step">Paso {index + 1}</span>
             </div>
-          </motion.div>
+
+            <h3>{step.title}</h3>
+
+            <div className="card-text">
+              {step.text.split("\n\n").map((block, i) => {
+                if (block.trim().startsWith("–") || block.includes("✔")) {
+                  return (
+                    <ul key={i}>
+                      {block.split("\n").map((item, j) => (
+                        <li key={j}>
+                          {item.replace("–", "").replace("✔", "").trim()}
+                        </li>
+                      ))}
+                    </ul>
+                  );
+                }
+                return <p key={i}>{block}</p>;
+              })}
+            </div>
+          </motion.article>
         ))}
       </div>
 
       {/* CIERRE */}
       <motion.div
-        className="proceso-cierre"
+        className="proceso-final"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1 }}
       >
-        <p>
-          Tú avanzas. Tu proyecto avanza. Tu formación se fortalece.
-        </p>
+        Tu proyecto no avanza solo. <strong>Avanza contigo.</strong>
       </motion.div>
 
     </section>
   );
 }
+

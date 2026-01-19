@@ -42,48 +42,49 @@ export default function About() {
       </section>
 
       {/* ====================== SECCIÓN 1: TARJETAS ====================== */}
-      <section className="about-section-alt">
-        <motion.h2
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="section-title"
-        >
-          Perfil Profesional
-        </motion.h2>
+<section className="about-section-alt">
+  <motion.h2
+    initial={{ opacity: 0, y: 15 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    className="section-title"
+  >
+    Perfil Profesional del Grupo Omega
+  </motion.h2>
 
-        <div className="alt-card-grid">
+  <div className="alt-card-grid">
 
-          <motion.div className="alt-card-1" whileHover={{ scale: 1.05 }}>
-            <h3>Formación Científica</h3>
-            <p>
-              Ciencias Biológicas y de la Salud, con especialización en biología
-              molecular, bioquímica, microbiología avanzada y diseño de estudios
-              experimentales. Experiencia sólida en técnicas como qPCR, secuenciación,
-              análisis de biomarcadores y validación molecular.
-            </p>
-          </motion.div>
+    <motion.div className="alt-card-1" whileHover={{ scale: 1.05 }}>
+      <h3>Enfoque Científico</h3>
+      <p>
+        El Grupo Omega está conformado por un equipo multidisciplinario con sólida
+        formación en ciencias biológicas y de la salud, integrando biología molecular,
+        bioquímica, microbiología y análisis científico aplicado para la generación
+        de conocimiento e innovación en salud.
+      </p>
+    </motion.div>
 
-          <motion.div className="alt-card-2" whileHover={{ scale: 1.05 }}>
-            <h3>Experiencia Actual</h3>
-            <p>
-              Jefe de Investigación en INTEGRADORA MÉDICA GASA, liderando líneas de
-              investigación, protocolos clínicos, producción académica y capacitación
-              científica. Responsable de coordinar equipos multidisciplinarios y generar
-              evidencia para la toma de decisiones en salud.
-            </p>
-          </motion.div>
+    <motion.div className="alt-card-2" whileHover={{ scale: 1.05 }}>
+      <h3>Experiencia y Liderazgo</h3>
+      <p>
+        El Grupo Omega lidera y desarrolla proyectos de investigación científica,
+        clínica y aplicada, coordinando equipos multidisciplinarios, diseñando
+        protocolos, y generando evidencia científica para la toma de decisiones
+        estratégicas en el ámbito de la salud y la biotecnología.
+      </p>
+    </motion.div>
 
-          <motion.div className="alt-card-3" whileHover={{ scale: 1.08 }}>
-            <h3>Producción Académica</h3>
-            <ul>
-              <li>40+ publicaciones indexadas</li>
-              <li>45+ ponencias y congresos especializados</li>
-              <li>Participación en estudios multicéntricos nacionales e internacionales</li>
-            </ul>
-          </motion.div>
+    <motion.div className="alt-card-3" whileHover={{ scale: 1.08 }}>
+      <h3>Producción Científica</h3>
+      <ul>
+        <li>Producción constante de artículos científicos y documentos técnicos</li>
+        <li>Participación activa en congresos, foros y eventos especializados</li>
+        <li>Colaboraciones nacionales e internacionales en proyectos de investigación</li>
+      </ul>
+    </motion.div>
 
-        </div>
-      </section>
+  </div>
+</section>
+
 
       {/* ====================== SECCIÓN 2: LÍNEA DEL TIEMPO ====================== */}
       <section className="timeline-section">
