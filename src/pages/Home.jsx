@@ -1,5 +1,5 @@
 // src/pages/Home.jsx
-import React, { useState } from "react";
+
 import Slider from "react-slick";
 import { FaCheckCircle, FaFlask, FaChartLine } from "react-icons/fa";
 import { motion } from "framer-motion";
