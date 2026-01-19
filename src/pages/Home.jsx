@@ -23,6 +23,15 @@ export default function Home() {
     pauseOnHover: false,
   };
 
+  // Estado para controlar el flip de cada tarjeta
+  const [flipped, setFlipped] = useState(Array(10).fill(false));
+
+  const toggleFlip = (index) => {
+    const newFlipped = [...flipped];
+    newFlipped[index] = !newFlipped[index];
+    setFlipped(newFlipped);
+  };
+
   return (
     <div className="home-container">
 
