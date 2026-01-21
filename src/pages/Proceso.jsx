@@ -23,9 +23,7 @@ comunicate en las siguientes lineas
 
 Numero de telefono:525548284917
 
-Correo electronico:alphaomegaovl1@gmail.com`
-
-,
+Correo electronico:alphaomegaovl1@gmail.com`,
   },
   {
     icon: <FaSearch />,
@@ -85,11 +83,34 @@ Además, si lo deseas, seguimos contigo para los ajustes finales o el envío a r
 
 export default function Proceso() {
   return (
-    <section className="proceso-wrapper">
+    <section
+      className="proceso-wrapper"
+      style={{
+        position: "relative",
+        background: "radial-gradient(circle at top, #102a43, #4889c2)",
+      }}
+    >
+      {/* LOGO DETRÁS */}
+      <div
+        style={{
+          position: "absolute",
+          top: "20px",
+          right: "20px",
+          width: "120px",
+          height: "auto",
+          opacity: 0.15, // transparencia para que sea discreto
+          zIndex: 0,
+          pointerEvents: "none", // que no interfiera con clicks
+          backgroundImage: 'url("/assets/logo_blanco.png")', // ruta dentro de public/assets
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+        }}
+      />
 
       {/* HERO */}
       <motion.header
         className="proceso-hero"
+        style={{ position: "relative", zIndex: 1 }}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -103,7 +124,7 @@ export default function Proceso() {
       </motion.header>
 
       {/* GRID AVANZADO */}
-      <div className="proceso-grid-advanced">
+      <div className="proceso-grid-advanced" style={{ position: "relative", zIndex: 1 }}>
         {steps.map((step, index) => (
           <motion.article
             key={index}
@@ -143,13 +164,13 @@ export default function Proceso() {
       {/* CIERRE */}
       <motion.div
         className="proceso-final"
+        style={{ position: "relative", zIndex: 1 }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         TU PROYECTO NO AVANZA SOLO <strong>AVANZA CONTIGO.</strong>
       </motion.div>
-
     </section>
   );
 }
