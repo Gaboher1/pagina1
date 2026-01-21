@@ -1,9 +1,12 @@
 .proceso-wrapper {
-  background: radial-gradient(circle at top, #102a43, #0b1d2d);
-  color: #e8f6ff;
-  padding: clamp(80px, 12vh, 120px) clamp(16px, 4vw, 20px);
-  font-family: "Inter", sans-serif;
+  position: relative;
+  background-image: url("../assets/logo_doc.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 500px; /* ajusta el tamaño del logo */
+  background-attachment: fixed; /* opcional, efecto elegante */
 }
+
 
 /* ================= HERO ================= */
 
@@ -142,7 +145,7 @@
 }
 
 .proceso-final strong {
-  color: #ffffff;
+  color: #0b0bf1;
   margin-left: 6px;
 }
 

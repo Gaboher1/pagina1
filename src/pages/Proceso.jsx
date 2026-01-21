@@ -17,7 +17,15 @@ const steps = [
     text: `Tienes una idea, una tarea, un protocolo, un ensayo o un proyecto…
 ¡y no sabes por dónde empezar!
 
-Nos escribes y nos cuentas qué necesitas en pocas palabras.`,
+Nos escribes y nos cuentas qué necesitas en pocas palabras.
+
+comunicate en las siguientes lineas
+
+Numero de telefono:525548284917
+
+Correo electronico:alphaomegaovl1@gmail.com`
+
+,
   },
   {
     icon: <FaSearch />,
