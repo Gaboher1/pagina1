@@ -74,3 +74,76 @@
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+.contacto-chatbot-footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #e5e5e5;
+}
+
+.contacto-chatbot-footer h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.contacto-chatbot-footer p {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
+
+/* Botones */
+.contact-buttons-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.w-btn-footer {
+  background: #25d366; /* verde WhatsApp */
+  color: #fff;
+}
+
+.w-btn-footer:hover {
+  background: #1ebe57;
+}
+
+.m-btn-footer {
+  background: #1a73e8; /* azul correo */
+  color: #fff;
+}
+
+.m-btn-footer:hover {
+  background: #155ab6;
+}
+
+/* Animación suave de entrada */
+.contacto-chatbot-footer {
+  animation: fadeIn 1s ease forwards;
+}
+
+.contact-buttons-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /* ↑ aumenta la separación entre botones */
+  margin-top: 20px;
+}
+
+.contact-buttons-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* ↑ espacio entre icono y texto */
+  padding: 14px 26px; /* ↑ botones más grandes */
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}

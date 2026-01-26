@@ -5,12 +5,14 @@ import { FaCheckCircle, FaFlask, FaChartLine } from "react-icons/fa";
 import { motion } from "framer-motion";
 import "../styles/Home.css";
 
+// ✅ Importar imágenes desde assets
+import SaludImg from "../assets/SALUD.png";
+import InvestigacionImg from "../assets/INVESTIGACION.png";
+import BiotecnologiaImg from "../assets/BIOTECNOLOGIA.png";
+
 export default function Home() {
-  const sliderImages = [
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1200",
-    "https://images.unsplash.com/photo-1581093588401-22d60f3b4a02?q=80&w=1200",
-    "https://images.unsplash.com/photo-1559125148-869baf508c95?q=80&w=1200",
-  ];
+  // ✅ Usar las imágenes importadas en el slider
+  const sliderImages = [SaludImg, InvestigacionImg, BiotecnologiaImg];
 
   const sliderSettings = {
     dots: true,
@@ -22,8 +24,6 @@ export default function Home() {
     arrows: false,
     pauseOnHover: false,
   };
-
- 
 
   return (
     <div className="home-container">
@@ -74,7 +74,11 @@ export default function Home() {
 
       {/* ====================== SLIDER ====================== */}
       <section className="slider-section">
-        <motion.h2 className="section-title" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
           Líneas Científicas Destacadas
         </motion.h2>
 
@@ -82,7 +86,10 @@ export default function Home() {
           <Slider {...sliderSettings}>
             {sliderImages.map((img, index) => (
               <div key={index} className="slider-item-premium">
-                <div className="slider-background" style={{ backgroundImage: `url(${img})` }} />
+                <div
+                  className="slider-background"
+                  style={{ backgroundImage: `url(${img})` }}
+                />
               </div>
             ))}
           </Slider>
@@ -120,7 +127,11 @@ export default function Home() {
 
       {/* ====================== BENEFICIOS ====================== */}
       <section className="beneficios-premium">
-        <motion.h2 className="section-title" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}>
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
           Áreas de Mayor Impacto Profesional
         </motion.h2>
 
@@ -183,7 +194,11 @@ export default function Home() {
 
       {/* ====================== WHY ====================== */}
       <section className="why-premium">
-        <motion.h2 className="section-title" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
           ¿Por qué trabajar con GRUPO OMEGA?
         </motion.h2>
 
@@ -200,18 +215,17 @@ export default function Home() {
       </section>
 
       {/* ====================== ENFOQUE AVANZADO ====================== */}
-<section className="futuristic-section">
-  <motion.h2
-    className="futuristic-title"
-    initial={{ opacity: 0, y: 25 }}
-    whileInView={{ opacity: 1, y: 0 }}
-  >
-    Líneas Científicas que Lidera
-  </motion.h2>
+      <section className="futuristic-section">
+        <motion.h2
+          className="futuristic-title"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          Líneas Científicas que Lidera
+        </motion.h2>
 
-  <div className="futuristic-grid">
-
-    <motion.div className="futuristic-card" whileHover={{ scale: 1.08 }}>
+        <div className="futuristic-grid">
+           <motion.div className="futuristic-card" whileHover={{ scale: 1.08 }}>
       <h3>🧬 Biología Molecular y Diagnóstico</h3>
       <p>
         PCR, RT-PCR, qPCR, oncología molecular, genética médica y diagnóstico
@@ -291,12 +305,10 @@ export default function Home() {
         capacitación especializada para personal de salud.
       </p>
     </motion.div>
+        </div>
 
-  </div>
-
-  <div className="futuristic-glow" />
-</section>
-
+        <div className="futuristic-glow" />
+      </section>
 
       {/* ====================== TESTIMONIOS ====================== */}
       <section className="testimonios-premium">

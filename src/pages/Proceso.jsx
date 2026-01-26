@@ -171,6 +171,10 @@ export default function Proceso() {
       >
         TU PROYECTO NO AVANZA SOLO <strong>AVANZA CONTIGO.</strong>
       </motion.div>
+
+      
     </section>
+
+    
   );
 }

@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 
 // 🔵 LOGO
-import logoDoc from "../assets/logo_doc.png";
+import logoDoc from "../assets/logo_perfecto.jpeg";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

@@ -187,3 +187,22 @@
     font-size: 1.15rem;
   }
 }
+
+/* ================= LOGO ================= */
+.nav-logo-img {
+  height: clamp(55px, 7vw, 95px);
+  width: clamp(55px, 7vw, 95px); /* Hacemos ancho igual que alto para que sea circular */
+  object-fit: cover; /* Asegura que la imagen llene el círculo sin deformarse */
+  border-radius: 50%; /* Hace el logo circular */
+  border: 3px solid #00c7ff; /* Borde azul brillante */
+  padding: 4px; /* Espacio entre la imagen y el borde */
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 18px rgba(0, 199, 255, 0.55)); /* Sombra de neón */
+}
+
+/* Efecto hover para destacar */
+.nav-logo-img:hover {
+  transform: scale(1.12) rotate(-5deg); /* Un pequeño zoom y giro */
+  filter: drop-shadow(0 0 22px rgba(0, 199, 255, 0.85));
+  border-color: #6ee7b7; /* Cambia a verde menta al pasar el mouse */
+}
