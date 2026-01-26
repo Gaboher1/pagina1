@@ -16,7 +16,7 @@
   width: 1200px; /* más grande */
   height: 1200px; /* más grande */
   transform: translate(-50%, -50%) rotate(-15deg);
-  background-image: url("../assets/logo_original.jpeg"); /* tu imagen */
+  background-image: url("../assets/logo_textura.png"); /* tu imagen */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -80,18 +80,27 @@
 /* ================= CARD ================= */
 
 .proceso-card-advanced {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(14px);
-  border-radius: 26px;
-  padding: clamp(26px, 4vw, 36px) clamp(24px, 4vw, 34px);
-  border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 35px 70px rgba(0,0,0,0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(10, 28, 220, 0.92),
+    rgba(47, 150, 219, 0.92)
+  );
+  backdrop-filter: blur(12px);
+  border-radius: 28px;
+  padding: clamp(28px, 4vw, 38px);
+  border: 1px solid rgba(5, 12, 119, 0.35);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.45),
+    inset 0 0 40px rgba(50, 253, 219, 0.683);
 }
+
 
 /* CARD ANCHA */
 .proceso-card-advanced.wide {
   grid-column: span 2;
 }
+
+/* ================= HEADER CARD ================= */
 
 /* ================= HEADER CARD ================= */
 
@@ -103,24 +112,28 @@
   gap: 16px;
 }
 
+/* ICONO DEL PASO */
 .card-icon {
   width: clamp(48px, 8vw, 56px);
   height: clamp(48px, 8vw, 56px);
   border-radius: 50%;
-  background: linear-gradient(145deg, #5ac8fa, #1b4f72);
+  background: linear-gradient(145deg, #3b82f6, #1e3a8a); /* AZUL ELEGANTE */
   display: grid;
   place-items: center;
   font-size: 1.3rem;
-  box-shadow: 0 0 30px rgba(90,200,250,0.5);
+  box-shadow: 0 0 30px rgba(59,130,246,0.55);
 }
 
+/* TEXTO "PASO X" */
 .card-step {
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  color: #5ac8fa;
-  font-weight: 700;
-  opacity: 0.8;
+  font-size: 1.30rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #93c5fd; /* AZUL CLARO */
+  opacity: 0.95;
 }
+
 
 /* ================= CONTENT ================= */
 
@@ -212,3 +225,7 @@
   text-transform: uppercase;
 }
 
+.rojo-contacto {
+  color: #ff3b3b;
+  font-weight: 700;
+}
