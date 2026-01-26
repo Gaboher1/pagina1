@@ -221,7 +221,7 @@ export default function FAQ() {
           <a href="https://wa.me/525548284917" className="w-btn">
             <FaWhatsapp /> WhatsApp
           </a>
-          <a href="mailto:contacto@email.com" className="m-btn">
+          <a href="mailto:alphaomegainves@gmail.com" className="m-btn">
             <FaEnvelope /> Correo
           </a>
         </div>
