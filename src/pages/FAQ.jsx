@@ -22,6 +22,11 @@ const preguntas = [
   { id: 12, pregunta: "¿Es apoyo académico o hacen trabajos?", respuesta: "Es acompañamiento académico. En trabajos entregados completos, tú debes conocer su contenido." },
   { id: 13, pregunta: "¿Qué pasa si no sé qué tema elegir?", respuesta: "Te ayudamos a delimitarlo, hacer preguntas, objetivos y metodología. Ideal si empiezas desde cero." },
   { id: 14, pregunta: "¿Puedo empezar hoy mismo?", respuesta: "Sí. Solo envía mensaje y comenzamos tu evaluación inicial." },
+  { id: 15, pregunta: "¿Cómo conoces los estándares de esa escuela para las tesis?",respuesta: "Trabajamos con los lineamientos oficiales de cada institución: manuales de titulación, guías de tesis, normativas internas y formatos vigentes. Además, tenemos experiencia previa con distintas universidades, lo que nos permite ajustar estructura, metodología y redacción a los estándares específicos de cada escuela." },
+  { id: 16, pregunta: "Si me recomiendas artículos, ¿me ayudas a conseguirlos? ¿Cuestan?", respuesta: "Sí. Te apoyamos a localizar artículos científicos relevantes y, cuando están disponibles en acceso abierto, te compartimos el enlace directo sin costo. Si algún artículo está en una revista de pago, te informamos previamente y buscamos alternativas equivalentes en acceso libre." },
+  { id: 17, pregunta: "¿Cuáles son los límites del apoyo que brindan?", respuesta: "Nuestro apoyo es académico y formativo: orientación metodológica, análisis de datos, redacción científica, revisión y asesoría. No suplantamos al estudiante en evaluaciones orales ni en decisiones institucionales. El objetivo es que comprendas y domines tu trabajo." },
+  { id: 18, pregunta: "¿Cuesta consultar artículos en revistas científicas?", respuesta: "Depende de la revista. Muchas bases de datos ofrecen artículos de acceso abierto gratuitos. Algunas revistas especializadas sí tienen costo, pero siempre buscamos primero opciones libres o equivalentes antes de sugerirte contenido de pago." },
+
 ];
 
 export default function FAQ() {
@@ -29,7 +34,7 @@ export default function FAQ() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const firma = " Para más información comunícate con el doctor Omar: +52 5564309985";
+  const firma = " Para más información comunícate al: +52 5548284917";
 
   // SALUDOS
   const saludos = ["hola", "buenas", "hey", "que tal", "holaa", "holi"];

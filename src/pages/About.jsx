@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/About.css";
-import aboutPhoto from "../assets/logo_original.jpeg";
+import aboutPhoto from "../assets/logo_perfecto.jpeg";
 
 
 export default function About() {
