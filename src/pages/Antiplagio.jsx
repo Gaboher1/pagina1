@@ -1,20 +1,39 @@
-// src/pages/Antiplagio.jsx
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  FaWhatsapp,
+  FaCheckCircle,
+  FaShieldAlt,
+  FaClock,
+  FaFileAlt,
+  FaQuestionCircle
+} from "react-icons/fa";
 import "../styles/Antiplagio.css";
 
 export default function Antiplagio() {
   return (
     <div className="anti-container">
 
-      {/* Partículas flotantes */}
+      {/* PARTÍCULAS */}
       <div className="anti-particles"></div>
 
+      {/* CTA WHATSAPP */}
+      <a
+        href="https://wa.me/5210000000000"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anti-whatsapp"
+      >
+        <FaWhatsapp />
+        <span>Cotizar ahora</span>
+      </a>
+
+      {/* HERO */}
       <motion.h1
-        className="anti-title"
-        initial={{ opacity: 0, y: -20 }}
+        className="anti-title glow-title"
+        initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1 }}
       >
         Revisión Antiplagio Profesional con <span>iThenticate®</span>
       </motion.h1>
@@ -23,117 +42,176 @@ export default function Antiplagio() {
         className="anti-sub"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
+        transition={{ delay: 0.4 }}
       >
-        Tu trabajo académico, 100% original y con respaldo internacional.
+        Detecta similitudes, protege tu trabajo y entrega con confianza académica.
       </motion.p>
 
-      {/* SECCIÓN 1 - IMPORTANCIA */}
-      <motion.div
-        className="anti-card"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
+      {/* TRUST */}
+      <div className="anti-trust">
+        <div><FaCheckCircle /> Aceptado por revistas científicas</div>
+        <div><FaShieldAlt /> Confidencialidad total</div>
+        <div><FaCheckCircle /> Certificado de originalidad</div>
+      </div>
+
+      {/* IMPORTANCIA */}
+      <motion.div className="anti-card" whileHover={{ scale: 1.03 }}>
         <h2>🔍 ¿Por qué es importante la revisión antiplagio?</h2>
         <p>
-          En universidades, proyectos de investigación, tesis y artículos científicos, la originalidad es esencial.
-          Incluso un error involuntario puede generar:
+          La revisión antiplagio garantiza que tu documento cumpla con los
+          estándares éticos y académicos exigidos por universidades y revistas científicas.
         </p>
         <ul>
-          <li>⚠️ Baja calificación</li>
-          <li>⚠️ Rechazo de tesis o protocolo</li>
-          <li>⚠️ Problemas éticos</li>
-          <li>⚠️ Rechazo por revistas científicas</li>
+          <li>❌ Evita rechazo de tesis o artículos</li>
+          <li>❌ Previene sanciones académicas</li>
+          <li>❌ Reduce observaciones de sinodales y editores</li>
+          <li>❌ Protege tu reputación académica</li>
         </ul>
       </motion.div>
 
-      {/* SECCIÓN 2 - iThenticate */}
-      <motion.div
-        className="anti-card"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        <h2>🛡️ ¿Qué es iThenticate®?</h2>
-        <p>
-          iThenticate es la herramienta líder mundial en detección de similitud,
-          utilizada por editoriales científicas como:
-        </p>
+      {/* QUÉ DETECTA */}
+      <motion.div className="anti-card" whileHover={{ scale: 1.03 }}>
+        <h2>🧬 ¿Qué detecta iThenticate®?</h2>
+        <ul>
+          <li>📌 Coincidencias textuales exactas</li>
+          <li>📌 Parafraseo inadecuado</li>
+          <li>📌 Autoplagio</li>
+          <li>📌 Uso incorrecto de citas y referencias</li>
+          <li>📌 Similitud con artículos, libros y repositorios</li>
+        </ul>
+      </motion.div>
 
-        <div className="anti-logos">
-          <span>Elsevier</span>
-          <span>Springer</span>
-          <span>Wiley</span>
-          <span>Nature</span>
+      {/* DOCUMENTOS */}
+      <motion.div className="anti-card" whileHover={{ scale: 1.03 }}>
+        <h2>📄 Tipos de documentos que revisamos</h2>
+        <div className="anti-docs">
+          {[
+            "Tesis (licenciatura, maestría, doctorado)",
+            "Artículos científicos",
+            "Protocolos de investigación",
+            "Ensayos académicos",
+            "Proyectos institucionales",
+            "Capítulos de libro"
+          ].map((doc, i) => (
+            <div key={i}><FaFileAlt /> {doc}</div>
+          ))}
         </div>
+      </motion.div>
 
+      {/* NO ES PLAGIO */}
+      <motion.div className="anti-card" whileHover={{ scale: 1.03 }}>
+        <h2>🧠 ¿Qué NO se considera plagio?</h2>
         <p>
-          Proporciona el análisis de similitud más preciso, confiable y aceptado por revistas de alto impacto.
+          No todas las coincidencias son plagio. iThenticate identifica similitudes,
+          pero el análisis profesional permite diferenciar:
         </p>
+        <ul>
+          <li>✔️ Referencias correctamente citadas</li>
+          <li>✔️ Metodología estándar</li>
+          <li>✔️ Frases técnicas comunes</li>
+          <li>✔️ Bibliografía</li>
+        </ul>
       </motion.div>
 
-      {/* SECCIÓN 3 - PROCESO */}
-      <motion.h2
-        className="anti-section-title"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
-        🚀 ¿Cómo funciona nuestro proceso?
-      </motion.h2>
-
-      <div className="anti-steps">
-        {[
-          {
-            icon: "📩",
-            title: "1. Envías tu documento",
-            text: "Aceptamos tesis, ensayos, artículos, protocolos y proyectos académicos."
-          },
-          {
-            icon: "🧬",
-            title: "2. Análisis con iThenticate®",
-            text: "Comparación con millones de fuentes científicas, libros y repositorios académicos."
-          },
-          {
-            icon: "📊",
-            title: "3. Informe profesional",
-            text: "Porcentajes de similitud, fuentes detectadas, pasajes críticos y recomendaciones."
-          },
-          {
-            icon: "✍️",
-            title: "4. Correcciones (opcional)",
-            text: "Parafraseo académico, ajuste metodológico, citación APA/Vancouver."
-          },
-          {
-            icon: "🏆",
-            title: "5. Certificado final",
-            text: "Informe final y Certificado de Originalidad aprobado para entrega o publicación."
-          }
-        ].map((step, index) => (
-          <motion.div
-            key={index}
-            className="anti-step-card"
-            initial={{ opacity: 0, scale: 0.7 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.15 }}
-          >
-            <div className="anti-step-icon">{step.icon}</div>
-            <h3>{step.title}</h3>
-            <p>{step.text}</p>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* BENEFICIOS */}
-      <motion.div
-        className="anti-banner"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        “Tu trabajo no solo será bueno, será ORIGINAL y con evidencia profesional.”
+      {/* TIEMPOS */}
+      <motion.div className="anti-card" whileHover={{ scale: 1.03 }}>
+        <h2><FaClock /> Tiempos de entrega</h2>
+        <ul>
+          <li>⏱️ Revisión estándar: 24 – 48 horas</li>
+          <li>⚡ Revisión express: 6 – 12 horas</li>
+          <li>✍️ Correcciones: según extensión</li>
+        </ul>
       </motion.div>
+
+      {/* PROCESO */}
+<motion.h2 className="anti-section-title">
+  🚀 Nuestro proceso profesional
+</motion.h2>
+
+<div className="anti-steps anti-steps-circular">
+  {[
+    {
+      icon: "📩",
+      title: "Recepción del documento",
+      text: "Recibimos tu archivo en formato Word o PDF mediante un canal seguro. Garantizamos confidencialidad absoluta y eliminación del archivo tras la revisión."
+    },
+    {
+      icon: "🧬",
+      title: "Análisis con iThenticate®",
+      text: "Comparamos tu documento con millones de artículos científicos, libros, revistas indexadas y repositorios académicos internacionales."
+    },
+    {
+      icon: "📊",
+      title: "Informe de similitud",
+      text: "Obtienes un reporte detallado con porcentaje de similitud, fuentes detectadas y coincidencias resaltadas para revisión académica."
+    },
+    {
+      icon: "✍️",
+      title: "Correcciones académicas",
+      text: "De forma opcional realizamos parafraseo académico, mejora de citación y ajustes metodológicos para reducir similitud sin perder rigor."
+    },
+    {
+      icon: "🏆",
+      title: "Certificación final",
+      text: "Emitimos un Certificado de Originalidad que avala que tu trabajo cumple con el porcentaje aceptable de similitud y un uso mínimo de inteligencia artificial."
+    },
+  ].map((step, i) => (
+    <motion.details
+      key={i}
+      className="anti-step-circle"
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: i * 0.15 }}
+    >
+      <summary>
+        <div className="circle-btn">
+          <span className="circle-icon">{step.icon}</span>
+        </div>
+        <h3>{step.title}</h3>
+      </summary>
+
+      <motion.p
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+      >
+        {step.text}
+      </motion.p>
+    </motion.details>
+  ))}
+</div>
+
+{/* CERTIFICADO FINAL */}
+<motion.div
+  className="anti-banner"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  🏆 Al finalizar el proceso, se otorga un <strong>Certificado de Originalidad</strong>  
+  que acredita que el documento cuenta con un <strong>porcentaje de similitud adecuado</strong>  
+  para ser aceptado en instituciones educativas y revistas científicas, así como un  
+  <strong>porcentaje muy bajo de contenido generado por inteligencia artificial</strong>.
+</motion.div>
+
+
+      {/* FAQ */}
+      <motion.div className="anti-card">
+        <h2><FaQuestionCircle /> Preguntas frecuentes</h2>
+        <p><strong>¿Mi documento se guarda?</strong><br />No. Tu archivo es confidencial.</p>
+        <p><strong>¿Garantizan aprobación?</strong><br />Reducimos el riesgo y te orientamos profesionalmente.</p>
+        <p><strong>¿Aceptan trabajos en otro idioma?</strong><br />Sí, español e inglés.</p>
+      </motion.div>
+
+      {/* CTA FINAL */}
+      <motion.div className="anti-banner">
+        📘 Protege tu trabajo académico.  
+        📊 Detecta similitudes.  
+        🏆 Entrega con confianza profesional.
+      </motion.div>
+
+      
 
     </div>
   );

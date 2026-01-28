@@ -1,147 +1,327 @@
-/* === CONTENEDOR PRINCIPAL === */
+/* CONTENEDOR */
 .anti-container {
-  padding: 80px 24px;
+  padding: 100px 24px;
   min-height: 100vh;
-  background: linear-gradient(145deg, #07101f, #0d1b2a, #15395b);
+  background:
+    linear-gradient(145deg, #07101f, #0d1b2a, #15395b),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.03) 0,
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px,
+      transparent 90px
+    );
   color: #eaf7ff;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-/* === PARTÍCULAS FLOTANTES === */
+/* PARTÍCULAS */
 .anti-particles::before,
 .anti-particles::after {
   content: "";
   position: absolute;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(0, 200, 255, 0.25), transparent 70%);
-  filter: blur(90px);
-  animation: float 9s infinite ease-in-out;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(0,200,255,0.35), transparent 70%);
+  filter: blur(110px);
+  animation: float 12s infinite ease-in-out;
 }
 
-.anti-particles::before { top: -10%; left: -10%; }
-.anti-particles::after { bottom: -10%; right: -10%; }
+.anti-particles::before { top: -20%; left: -20%; }
+.anti-particles::after { bottom: -20%; right: -20%; }
 
 @keyframes float {
-  0% { transform: translateY(0px) translateX(0px); }
-  50% { transform: translateY(-20px) translateX(20px); }
-  100% { transform: translateY(0px) translateX(0px); }
+  0% { transform: translate(0,0); }
+  50% { transform: translate(40px,-40px); }
+  100% { transform: translate(0,0); }
 }
 
-/* === TITULO === */
+/* TÍTULO */
 .anti-title {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin-bottom: 14px;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 900;
   background: linear-gradient(90deg, #5ac8fa, #00c7ff);
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.anti-title span {
-  color: #5ac8fa;
-  text-shadow: 0 0 20px #00c7ff55;
+.glow-title {
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 15px #00c7ff55; }
+  to { text-shadow: 0 0 45px #00c7ffaa; }
 }
 
 .anti-sub {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   opacity: 0.9;
-  margin-bottom: 50px;
+  margin: 20px 0 50px;
 }
 
-/* === TARJETAS PRINCIPALES === */
+/* TRUST BAR */
+.anti-trust {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.anti-trust div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.12);
+  padding: 12px 20px;
+  border-radius: 18px;
+  font-weight: 600;
+}
+
+/* TARJETAS */
 .anti-card {
-  width: 95%;
   max-width: 900px;
-  margin: 35px auto;
-  padding: 32px;
-  border-radius: 25px;
-
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(14px);
-
-  box-shadow:
-    0 10px 40px rgba(0, 200, 255, 0.18),
-    0 0 35px rgba(0, 200, 255, 0.18);
-
-  animation: fadeUp 0.6s ease forwards;
+  margin: 40px auto;
+  padding: 38px;
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.15),
+    rgba(255,255,255,0.05)
+  );
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 18px 50px rgba(0,200,255,0.25);
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  } to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.anti-card ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* === LOGOS EDITORIALES === */
+.anti-card li {
+  margin: 10px 0;
+}
+
+/* LOGOS */
 .anti-logos {
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 20px;
   flex-wrap: wrap;
-  margin: 12px 0;
+  margin: 18px 0;
 }
 
 .anti-logos span {
-  padding: 8px 18px;
-  background: rgba(255, 255, 255, 0.10);
-  border-radius: 15px;
-  font-weight: 600;
+  padding: 12px 22px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  font-weight: 700;
 }
 
-/* === SECCIÓN DE PASOS === */
+/* SECCIÓN */
 .anti-section-title {
-  margin-top: 60px;
-  font-size: 2rem;
+  margin-top: 80px;
+  font-size: 2.3rem;
   color: #5ac8fa;
 }
 
-/* === TARJETAS DE PASOS === */
+/* PASOS */
 .anti-steps {
-  margin-top: 40px;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-  padding: 0 20px;
+  gap: 30px;
 }
 
 .anti-step-card {
-  padding: 28px;
-  border-radius: 22px;
-
-  background: rgba(255, 255, 255, 0.10);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(10px);
-
-  transition: 0.35s ease;
+  padding: 34px;
+  border-radius: 26px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(14px);
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
 }
 
-.anti-step-card:hover {
-  transform: scale(1.06);
-  box-shadow: 0 12px 40px rgba(0, 200, 255, 0.3);
+.anti-step-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(0,200,255,0.35), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.anti-step-card:hover::before {
+  opacity: 1;
 }
 
 .anti-step-icon {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  margin-bottom: 14px;
+  animation: floatIcon 3s infinite ease-in-out;
 }
 
-/* === BANNER FINAL === */
+@keyframes floatIcon {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* BANNER */
 .anti-banner {
-  margin-top: 60px;
-  padding: 28px;
-  border-radius: 20px;
-
+  margin: 80px auto 0;
+  max-width: 900px;
+  padding: 36px;
+  border-radius: 24px;
   background: linear-gradient(135deg, #15395b, #0d1b2a);
-  box-shadow: 0 10px 35px rgba(0, 200, 255, 0.25);
+  box-shadow: 0 0 60px rgba(0,200,255,0.7);
+  font-size: 1.4rem;
+  font-weight: 800;
+  animation: pulseGlow 3s infinite;
+}
 
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 30px rgba(0,200,255,0.4); }
+  50% { box-shadow: 0 0 70px rgba(0,200,255,0.8); }
+  100% { box-shadow: 0 0 30px rgba(0,200,255,0.4); }
+}
+
+/* ==============================
+   BOTÓN WHATSAPP RESPONSIVE
+================================ */
+.anti-whatsapp {
+  position: fixed;
+  bottom: clamp(16px, 3vw, 28px);
+  right: clamp(16px, 3vw, 28px);
+
+  background: #25d366;
+  color: white;
+
+  padding: clamp(12px, 1.2vw, 16px) clamp(18px, 2vw, 22px);
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  font-weight: 700;
+
+  box-shadow: 0 10px 35px rgba(37,211,102,0.6);
+  z-index: 999;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anti-whatsapp svg {
+  font-size: clamp(1.2rem, 1.6vw, 1.4rem);
+}
+
+.anti-whatsapp:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 45px rgba(37,211,102,0.8);
+}
+
+/* ==============================
+   MÓVIL: SOLO LOGO
+================================ */
+@media (max-width: 640px) {
+  .anti-whatsapp {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+  }
+
+  .anti-whatsapp span {
+    display: none; /* Oculta el texto en pantallas pequeñas */
+  }
+
+  .anti-whatsapp svg {
+    font-size: 1.6rem; /* Ícono más grande para que destaque */
+  }
+}
+
+.anti-whatsapp:hover {
+  transform: scale(1.08);
+}
+
+/* ==============================
+   PROCESO CIRCULAR INTERACTIVO
+================================ */
+.anti-steps-circular {
+  max-width: 1100px;
+  margin: 50px auto 0;
+}
+
+/* DETAILS BASE */
+.anti-step-circle {
+  background: rgba(255,255,255,0.14);
+  border-radius: 28px;
+  margin-bottom: 26px;
+  padding: 26px;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 40px rgba(0,200,255,0.25);
+  cursor: pointer;
+  transition: 0.35s ease;
+}
+
+.anti-step-circle[open] {
+  box-shadow: 0 18px 60px rgba(0,200,255,0.45);
+}
+
+/* SUMMARY */
+.anti-step-circle summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.anti-step-circle summary::-webkit-details-marker {
+  display: none;
+}
+
+/* BOTÓN CIRCULAR */
+.circle-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00c7ff, #5ac8fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(0,200,255,0.8);
+  transition: 0.35s ease;
+}
+
+.anti-step-circle:hover .circle-btn {
+  transform: scale(1.12) rotate(6deg);
+}
+
+/* ICONO */
+.circle-icon {
+  font-size: 2rem;
+}
+
+/* TEXTO */
+.anti-step-circle h3 {
   font-size: 1.3rem;
-  font-weight: 600;
-  color: #eaf7ff;
+  font-weight: 800;
+  margin: 0;
+}
+
+.anti-step-circle p {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #eef6ff;
 }

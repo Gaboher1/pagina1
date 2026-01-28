@@ -91,7 +91,7 @@
 /* ======================== SLIDER ======================== */
 .slider-section {
   padding: 80px 24px;
-  background: linear-gradient(180deg, #e0f7ff, rgba(224,247,255,0.75));
+  background: linear-gradient(180deg, #113c92, rgba(224,247,255,0.75));
 }
 
 .section-title {
@@ -167,7 +167,7 @@
 .scientific-lines-title {
   font-size: 2rem;
   font-weight: 800;
-  background: linear-gradient(90deg, #0d1b2a, #15395b);
+  background: linear-gradient(90deg, #2165ad, #15395b);
   -webkit-background-clip: text;
   color: transparent;
   margin-bottom: 35px;
@@ -205,7 +205,7 @@
 /* ======================== BENEFICIOS ======================== */
 .beneficios-premium {
   padding: 90px 24px;
-  background: linear-gradient(to bottom, #e0f7ff, #f9fcff);
+  background: linear-gradient(to bottom, #0e637f, #f9fcff);
 }
 
 .card-container-premium {
