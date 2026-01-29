@@ -21,42 +21,30 @@ export default function Navbar() {
   const [hovered, setHovered] = useState(null);
 
   const items = [
-  { label: "Inicio", icon: <FaHome />, path: "/" },
-  { label: "Quiénes Somos", icon: <FaUser />, path: "/quienes-somos" },
-  
-  // 🔹 Ahora Proceso es el tercero
-  { label: "Proceso", icon: <FaRoute />, path: "/proceso" },
-
-  { label: "Servicios", icon: <FaCogs />, path: "/servicios" },
-  { label: "FAQ", icon: <FaQuestion />, path: "/faq" },
-
-  // 🌿 ICONOS VERDES
-  {
-    label: "Análisis",
-    icon: <FaChartLine />,
-    path: "/analisis",
-    special: true
-  },
-  {
-    label: "Antiplagio",
-    icon: <FaShieldAlt />,
-    path: "/antiplagio",
-    special: true
-  }
-];
-
+    { label: "Inicio", icon: <FaHome />, path: "/" },
+    { label: "Quiénes Somos", icon: <FaUser />, path: "/quienes-somos" },
+    { label: "Proceso", icon: <FaRoute />, path: "/proceso" },
+    { label: "Servicios", icon: <FaCogs />, path: "/servicios" },
+    { label: "FAQ", icon: <FaQuestion />, path: "/faq" },
+    { label: "Análisis", icon: <FaChartLine />, path: "/analisis", special: true },
+    { label: "Antiplagio", icon: <FaShieldAlt />, path: "/antiplagio", special: true }
+  ];
 
   return (
     <nav className="nav-container">
       <div className="nav-inner">
 
-        {/* LOGO */}
+        {/* LOGO + TEXTO */}
         <Link to="/" className="nav-logo">
           <img
             src={logoDoc}
             alt="Logo Investigación"
             className="nav-logo-img"
           />
+          <div className="nav-logo-text">
+            <span className="nav-logo-title glow-text">Grupo Alpha Omega</span>
+            <span className="nav-logo-subtitle">Metodología y Desarrollo Científico</span>
+          </div>
         </Link>
 
         {/* HAMBURGER */}
@@ -75,17 +63,14 @@ export default function Navbar() {
             >
               <Link to={item.path} onClick={() => setOpen(false)}>
                 <span
-                  className={`nav-icon ${
-                    item.special ? "nav-icon-green" : ""
-                  } ${hovered === index ? "hidden" : ""}`}
+                  className={`nav-icon ${item.special ? "nav-icon-green" : ""} ${
+                    hovered === index ? "hidden" : ""
+                  }`}
                 >
                   {item.icon}
                 </span>
-
                 <span
-                  className={`nav-text ${
-                    hovered === index ? "visible" : ""
-                  }`}
+                  className={`nav-text ${hovered === index ? "visible" : ""}`}
                 >
                   {item.label}
                 </span>

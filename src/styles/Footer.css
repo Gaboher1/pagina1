@@ -7,7 +7,7 @@
   padding: 60px 20px;
   margin-top: auto !important;
 
-  background: linear-gradient(135deg, #0a0f24, #02040f);
+  background: linear-gradient(135deg, #02304a, #070f41);
   text-align: center;
   color: #e5e5e5;
 
@@ -27,7 +27,7 @@
   width: 350px;
   height: 350px;
   transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(0, 102, 255, 0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(28, 148, 191, 0.733), transparent 70%);
   filter: blur(40px);
   animation: glowPulse 6s infinite ease-in-out;
   z-index: 0;

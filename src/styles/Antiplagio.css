@@ -1,21 +1,40 @@
-/* CONTENEDOR */
+/* CONTENEDOR PRINCIPAL CON IMAGEN DE FONDO */
 .anti-container {
   padding: 100px 24px;
   min-height: 100vh;
-  background:
-    linear-gradient(145deg, #07101f, #0d1b2a, #15395b),
-    repeating-linear-gradient(
-      90deg,
-      rgba(255,255,255,0.03) 0,
-      rgba(255,255,255,0.03) 1px,
-      transparent 1px,
-      transparent 90px
-    );
   color: #eaf7ff;
   text-align: center;
   position: relative;
   overflow: hidden;
+  z-index: 0; /* Asegura que todo el contenido esté arriba */
 }
+
+/* FONDO IMAGEN */
+.anti-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/icono.png") top left repeat;
+  background-size: 500px auto; /* hace la imagen más pequeña y mantiene proporción */
+  opacity: 1.5; /* ajusta visibilidad sin opacar contenido */
+  z-index: -2;
+}
+
+
+/* CAPA OSCURA Y GRADIENTES PARA LEER MEJOR EL TEXTO */
+.anti-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    rgba(7,16,31,0.85),
+    rgba(13,27,42,0.85),
+    rgba(21,57,91,0.85)
+  );
+  z-index: -1;
+}
+
 
 /* PARTÍCULAS */
 .anti-particles::before,
@@ -89,7 +108,7 @@
   border-radius: 28px;
   background: linear-gradient(
     135deg,
-    rgba(255,255,255,0.15),
+    rgba(26, 169, 240, 0.708),
     rgba(255,255,255,0.05)
   );
   backdrop-filter: blur(18px);
@@ -255,27 +274,35 @@
 
 /* ==============================
    PROCESO CIRCULAR INTERACTIVO
-================================ */
+============================== */
 .anti-steps-circular {
   max-width: 1100px;
   margin: 50px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px; /* más compacto */
 }
 
-/* DETAILS BASE */
+/* TARJETA DETALLE */
 .anti-step-circle {
-  background: rgba(255,255,255,0.14);
+  background: linear-gradient(135deg, rgba(0, 199, 255, 0.15), rgba(90, 200, 250, 0.08));
   border-radius: 28px;
-  margin-bottom: 26px;
-  padding: 26px;
-  border: 1px solid rgba(255,255,255,0.25);
+  margin-bottom: 20px;
+  padding: 22px 18px; /* más compacto */
+  border: 1px solid rgba(0,200,255,0.2);
   backdrop-filter: blur(14px);
-  box-shadow: 0 12px 40px rgba(0,200,255,0.25);
+  box-shadow: 0 12px 32px rgba(0,200,255,0.18);
   cursor: pointer;
-  transition: 0.35s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anti-step-circle:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 50px rgba(0,200,255,0.3);
 }
 
 .anti-step-circle[open] {
-  box-shadow: 0 18px 60px rgba(0,200,255,0.45);
+  box-shadow: 0 18px 60px rgba(0,200,255,0.35);
 }
 
 /* SUMMARY */
@@ -283,7 +310,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px; /* más compacto */
 }
 
 .anti-step-circle summary::-webkit-details-marker {
@@ -292,36 +319,66 @@
 
 /* BOTÓN CIRCULAR */
 .circle-btn {
-  width: 64px;
-  height: 64px;
+  width: 60px; /* más pequeño */
+  height: 60px;
   border-radius: 50%;
   background: linear-gradient(135deg, #00c7ff, #5ac8fa);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 25px rgba(0,200,255,0.8);
-  transition: 0.35s ease;
+  box-shadow: 0 0 22px rgba(0,200,255,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .anti-step-circle:hover .circle-btn {
-  transform: scale(1.12) rotate(6deg);
+  transform: scale(1.12) rotate(5deg);
+  box-shadow: 0 0 38px rgba(0,200,255,0.7);
 }
 
 /* ICONO */
 .circle-icon {
-  font-size: 2rem;
+  font-size: 1.8rem; /* más proporcional */
+  color: #fff;
 }
 
 /* TEXTO */
 .anti-step-circle h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem; /* ligeramente más pequeño para ajustar */
   font-weight: 800;
   margin: 0;
+  color: #00c7ff;
 }
 
 .anti-step-circle p {
-  margin-top: 18px;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #eef6ff;
+  margin-top: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #eaf7ff;
 }
+
+/* ==============================
+   MÓVIL
+============================== */
+@media (max-width: 640px) {
+  .anti-step-circle {
+    padding: 18px 14px;
+  }
+
+  .circle-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .circle-icon {
+    font-size: 1.5rem;
+  }
+
+  .anti-step-circle h3 {
+    font-size: 1.1rem;
+  }
+
+  .anti-step-circle p {
+    font-size: 0.95rem;
+  }
+}
+

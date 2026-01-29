@@ -6,9 +6,15 @@ import {
   FaShieldAlt,
   FaClock,
   FaFileAlt,
-  FaQuestionCircle
+  FaQuestionCircle,
+  FaEnvelope,       // reemplaza 📩
+  FaVials,          // reemplaza 🧬
+  FaChartBar,       // reemplaza 📊
+  FaEdit,           // reemplaza ✍️
+  FaCertificate     // reemplaza 🏆
 } from "react-icons/fa";
 import "../styles/Antiplagio.css";
+
 
 export default function Antiplagio() {
   return (
@@ -131,27 +137,27 @@ export default function Antiplagio() {
 <div className="anti-steps anti-steps-circular">
   {[
     {
-      icon: "📩",
+      icon: <FaEnvelope />,
       title: "Recepción del documento",
       text: "Recibimos tu archivo en formato Word o PDF mediante un canal seguro. Garantizamos confidencialidad absoluta y eliminación del archivo tras la revisión."
     },
     {
-      icon: "🧬",
+      icon: <FaVials />,
       title: "Análisis con iThenticate®",
       text: "Comparamos tu documento con millones de artículos científicos, libros, revistas indexadas y repositorios académicos internacionales."
     },
     {
-      icon: "📊",
+      icon: <FaChartBar />,
       title: "Informe de similitud",
       text: "Obtienes un reporte detallado con porcentaje de similitud, fuentes detectadas y coincidencias resaltadas para revisión académica."
     },
     {
-      icon: "✍️",
+      icon: <FaEdit />,
       title: "Correcciones académicas",
       text: "De forma opcional realizamos parafraseo académico, mejora de citación y ajustes metodológicos para reducir similitud sin perder rigor."
     },
     {
-      icon: "🏆",
+      icon: <FaCertificate />,
       title: "Certificación final",
       text: "Emitimos un Certificado de Originalidad que avala que tu trabajo cumple con el porcentaje aceptable de similitud y un uso mínimo de inteligencia artificial."
     },
@@ -166,11 +172,10 @@ export default function Antiplagio() {
     >
       <summary>
         <div className="circle-btn">
-          <span className="circle-icon">{step.icon}</span>
+          {step.icon}
         </div>
         <h3>{step.title}</h3>
       </summary>
-
       <motion.p
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -181,6 +186,7 @@ export default function Antiplagio() {
     </motion.details>
   ))}
 </div>
+
 
 {/* CERTIFICADO FINAL */}
 <motion.div

@@ -206,3 +206,65 @@
   filter: drop-shadow(0 0 22px rgba(0, 199, 255, 0.85));
   border-color: #6ee7b7; /* Cambia a verde menta al pasar el mouse */
 }
+
+/* CONTENEDOR DE TEXTO AL LADO DEL LOGO */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* TEXTO PRINCIPAL */
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* TEXTO CON EFECTO NEÓN */
+.nav-logo-title {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 800;
+  color: #0b4a5c; /* azul brillante */
+  line-height: 1.2;
+}
+
+/* GLOW ANIMADO */
+.glow-text {
+  text-shadow:
+    0 0 4px #00c7ff,
+    0 0 8px #00c7ff,
+    0 0 12px #00c7ff,
+    0 0 16px #00f0ff,
+    0 0 24px #00f0ff;
+  animation: glowAnim 2.5s infinite alternate;
+}
+
+@keyframes glowAnim {
+  0% { text-shadow: 0 0 4px #00c7ff, 0 0 8px #00c7ff, 0 0 12px #00c7ff, 0 0 16px #00f0ff, 0 0 24px #00f0ff; }
+  50% { text-shadow: 0 0 6px #00c7ff, 0 0 10px #00c7ff, 0 0 14px #00c7ff, 0 0 18px #00f0ff, 0 0 28px #00f0ff; }
+  100% { text-shadow: 0 0 4px #00c7ff, 0 0 8px #00c7ff, 0 0 12px #00c7ff, 0 0 16px #00f0ff, 0 0 24px #00f0ff; }
+}
+
+/* SUBTÍTULO */
+.nav-logo-subtitle {
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  font-weight: 500;
+  color: #d9e7f5;
+  line-height: 1.2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .nav-logo {
+    gap: 10px;
+  }
+
+  .nav-logo-title {
+    font-size: 1rem;
+  }
+
+  .nav-logo-subtitle {
+    font-size: 0.75rem;
+  }
+}
