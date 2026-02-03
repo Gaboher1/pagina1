@@ -272,6 +272,91 @@
 }
 
 /* ============================================================
+   SECCIÓN ANÁLISIS ESTADÍSTICO
+============================================================ */
+.analisis-stat-section {
+  margin-top: 90px;
+  padding: 60px 25px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.8s ease;
+}
+
+.analisis-stat-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #a0f0ff, #00c8ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 18px;
+}
+
+.analisis-stat-intro {
+  text-align: center;
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 900px;
+  margin: 0 auto 55px;
+  line-height: 1.6;
+}
+
+.analisis-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* TARJETAS DE ANÁLISIS */
+.stat-card {
+  background: linear-gradient(160deg, #1c3f5e, #0f2a42);
+  border-radius: 24px;
+  padding: 30px 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.5);
+}
+
+/* ICONO */
+.stat-icon {
+  font-size: 34px;
+  color: #00c8ff;
+  margin-bottom: 14px;
+}
+
+/* TITULO */
+.stat-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* LISTA */
+.stat-card ul {
+  padding-left: 18px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.stat-card li {
+  margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .analisis-stat-title { font-size: 28px; }
+  .analisis-stat-intro { font-size: 16px; }
+  .stat-card h3 { font-size: 18px; }
+  .stat-card ul { font-size: 14.5px; }
+}
+/* ============================================================
    RESPONSIVE
 ============================================================ */
 @media (max-width: 1024px) {

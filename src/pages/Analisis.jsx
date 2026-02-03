@@ -123,6 +123,67 @@ export default function Analisis() {
         </div>
 
       </div>
+
+      {/* ======================= ANÁLISIS ESTADÍSTICO DETALLADO ======================= */}
+<section className="analisis-stat-section">
+
+  <h2 className="analisis-stat-title">
+    📊 ¿Qué incluye el análisis estadístico en cada trabajo?
+  </h2>
+
+  <p className="analisis-stat-intro">
+    Cada proyecto recibe un análisis estadístico personalizado, riguroso y acorde
+    al diseño metodológico, tipo de variables y objetivos de investigación.
+  </p>
+
+  <div className="analisis-stat-grid">
+
+    <div className="stat-card">
+      <FaDatabase className="stat-icon" />
+      <h3>Preparación de datos</h3>
+      <ul>
+        <li>Revisión de estructura de la base de datos</li>
+        <li>Depuración y validación de variables</li>
+        <li>Codificación correcta (numérica y categórica)</li>
+        <li>Detección de datos faltantes y atípicos</li>
+      </ul>
+    </div>
+
+    <div className="stat-card">
+      <FaChartLine className="stat-icon" />
+      <h3>Estadística descriptiva</h3>
+      <ul>
+        <li>Medidas de tendencia central y dispersión</li>
+        <li>Tablas y gráficas interpretables</li>
+        <li>Descripción clínica o poblacional</li>
+        <li>Análisis por grupos cuando aplica</li>
+      </ul>
+    </div>
+
+    <div className="stat-card">
+      <FaCheckCircle className="stat-icon" />
+      <h3>Pruebas estadísticas</h3>
+      <ul>
+        <li>Selección correcta de pruebas (paramétricas / no paramétricas)</li>
+        <li>Pruebas de comparación y asociación</li>
+        <li>Correlaciones y regresiones</li>
+        <li>Justificación estadística metodológica</li>
+      </ul>
+    </div>
+
+    <div className="stat-card">
+      <FaLock className="stat-icon" />
+      <h3>Interpretación y reporte</h3>
+      <ul>
+        <li>Interpretación clara y sin tecnicismos innecesarios</li>
+        <li>Resultados listos para tesis o artículo científico</li>
+        <li>Redacción compatible con normas académicas</li>
+        <li>Confidencialidad absoluta de la información</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
     </div>
   );
 }

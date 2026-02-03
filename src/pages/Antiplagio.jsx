@@ -25,7 +25,7 @@ export default function Antiplagio() {
 
       {/* CTA WHATSAPP */}
       <a
-        href="https://wa.me/5210000000000"
+        href="https://wa.me/525548284917"
         target="_blank"
         rel="noopener noreferrer"
         className="anti-whatsapp"
@@ -216,9 +216,6 @@ export default function Antiplagio() {
         📊 Detecta similitudes.  
         🏆 Entrega con confianza profesional.
       </motion.div>
-
-      
-
     </div>
   );
 }
